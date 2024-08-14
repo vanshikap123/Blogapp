@@ -57,8 +57,6 @@ let navigate= useNavigate()
   <div className="mb-3">
     <label htmlFor="exampleInputPassword1" className="form-label">Email</label>
     <input ref={emailRef} type="email" className="form-control" id="exampleInputPassword1" />
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-
   </div>
   <div className="mb-3">
     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>

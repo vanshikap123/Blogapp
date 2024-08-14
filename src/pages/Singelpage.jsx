@@ -1,21 +1,20 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation,Link } from 'react-router-dom'
 
 const Singelpage = () => {
     const location= useLocation();
     console.log(location.state)
   return (
-    <div className='row m-auto w-75 my-5 shadow-lg p-3'>
-    <div className="col-md-6 w-50">
-        <img src={location.state.image} className='IMAGES' alt="" srcset="" />
+    <div className='row m-auto w-75 my-5 shadow-lg p-3 bg-black'>
+    <div className="col-md-6 w-50 ">
+        <img src={location.state.image} className='w-100' alt="" srcset="" />
     </div>
-    <div className="col-md-6">
+    <div className="col-md-6 text-center m-auto">
 
-        <h1 className='text-danger'>{location.state.title}</h1>
-        <p>Description:{location.state.content}</p>
-        <p>Author Name:{location.state.author.name}</p>
-        <p>Date:{location.state.date}</p>
-     
+        <h1 className='colores'>{location.state.title}</h1>
+        <p className='colores fs-2'>Description: {location.state.content}</p>
+        <p className='text-white'>Author Name:{location.state.author.name}</p>
+     <button className='button1'><Link to="/">Go Home</Link></button>
       
     </div>
     </div>

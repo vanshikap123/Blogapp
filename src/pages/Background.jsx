@@ -21,7 +21,7 @@ const Background=()=>{
             <div className=' back'>
                 <h1 className='text-center '>My first Blog Website </h1>
                 <h3  className='text-center'>Uploades Your <span  id='text' ref={el}></span></h3>
-                <p className='text-center  fs-5'>Welcome to our blog app, your go-to platform for engaging and informative content on a wide range of topics. Whether you’re interested in technology, lifestyle, health, business, or travel, we've got something for everyone.</p>
+                <p className='text-center '>Welcome to our blog app, your go-to platform for engaging and informative content on a wide range of topics. Whether you’re interested in technology, lifestyle, health, business, or travel, we've got something for everyone.</p>
                 
             </div>
 

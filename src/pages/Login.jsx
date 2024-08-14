@@ -58,13 +58,15 @@ const Login = () => {
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
           <input ref = {passwordRef} type="password" className="form-control" id="exampleInputPassword1" />
         </div>
+        <div className=' forget '>
         <button onClick={handleSubmit} type="submit" className="button2 my-3">Login</button>
-        <h5 className='text-center'>or</h5>
-<div className=' forget '>
+     
   <button className='button1'>  <Link to='/forget'>Forget Password</Link>
   </button>
-<p className='text-center '>don't have an account <Link to={'/register'}>Register</Link></p>
+ 
 </div>
+<h5 className='text-center'>or</h5>
+<p className='text-center '>don't have an account <Link to={'/register'}>Register</Link></p>
       </form>
 
 

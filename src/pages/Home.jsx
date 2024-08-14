@@ -95,11 +95,11 @@ if(video){
         <button onClick={()=>setclicked(true)} className='button1'>Create Blog</button>
       </div>
       
-      <div className="col-md-10 m-auto  w-100">
-      <div className='row w-100  m-auto  gap-5 text-center p-1 '>
+      <div className="col-md-10 m-auto  w-100  ">
+      <div className='row gap-5 w-100 m-auto p-5'>
       {
         posts.map((ele)=>{
-          return <div key={ele._id} className="card p-2 ms-2 box bg-black text-white" style={{width: '20rem'}}>
+          return <div key={ele._id} className="card p-2 m-1 box bg-black text-white" style={{width: '18.6rem'}}>
 {ele.image &&  <img src={ele.image} className="card-img-top img"alt="..." />}
  {ele.video &&  <video controls src={ele.video} className='img'></video>}
   <div className="card-body">
@@ -124,7 +124,7 @@ if(video){
     <label htmlFor="">Description</label>
     <input type="text" ref={descRef} className="form-control" id="exampleInputEmail1" aria-describedby="" placeholder=" " />
  </div>
- <label className='button1 text-center mt-4 pt-1' htmlFor="abc">upload Image</label>
+ <label className='button1 text-center mt-4 pt-1' htmlFor="abc"> photo/video</label>
    
    <input onChange={handleInputChange} hidden type="file" id='abc'/>
  {image &&   <img style={{margin:"20px auto"}} width={"150px"} height={"150px"}  src={URL.createObjectURL(image)} alt="" />}
