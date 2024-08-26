@@ -23,7 +23,7 @@ let navigate= useNavigate()
     }
     console.log(obj)
 
-    let response = await fetch('http://localhost:4000/user/register',{
+    let response = await fetch('https://backend-er58.onrender.com/user/register',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

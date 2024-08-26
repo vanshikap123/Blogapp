@@ -7,7 +7,7 @@ const handleclick=async(e)=>{
 e.preventDefault()
 let user = inputref.current.value
 console.log(user)
-let res = await fetch(`http://localhost:4000/user/forgetpassword`,{
+let res = await fetch(`https://backend-er58.onrender.com/user/forgetpassword`,{
     method:'POST',
     headers:{
         'content-type':'application/json'

@@ -23,7 +23,7 @@ const Login = () => {
       password: passwordRef.current.value
     }
 
-    let res = await fetch('http://localhost:4000/user/login',{
+    let res = await fetch('https://backend-er58.onrender.com/user/login',{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'

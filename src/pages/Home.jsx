@@ -21,7 +21,7 @@ const Home = () => {
   const [posts, setAllPosts] = useState([]);
 
   const fetchAllPosts = async()=>{
-    let res = await fetch('http://localhost:4000/posts/allposts')
+    let res = await fetch('https://backend-er58.onrender.com/posts/allposts')
     let data = await res.json();
     console.log(data.posts)
     setAllPosts(data.posts)
@@ -57,7 +57,7 @@ if(video){
   form.append('content',descRef.current.value)
   form.append('author',ctx.user.id)
   form.append('video',video)
-  let res = await fetch('http://localhost:4000/uploadvideo',{
+  let res = await fetch('https://backend-er58.onrender.com/uploadvideo',{
     method:"POST",
     body:form    
     })
@@ -74,7 +74,7 @@ if(video){
       form.append('content',descRef.current.value)
       form.append('author',ctx.user.id)
       form.append('image',image)
-      let res = await fetch('http://localhost:4000/uploadImage',{
+      let res = await fetch('https://backend-er58.onrender.com/uploadImage',{
         method:"POST",
         body:form    
         })
@@ -99,7 +99,7 @@ if(video){
       <div className='row gap-5 w-100 m-auto p-5'>
       {
         posts.map((ele)=>{
-          return <div key={ele._id} className="card p-2 m-1 box bg-black text-white" style={{width: '18.6rem'}}>
+          return <div key={ele._id} className="card p-2 m-1 box bg-black text-white text-center" style={{width: '18.6rem'}}>
 {ele.image &&  <img src={ele.image} className="card-img-top img"alt="..." />}
  {ele.video &&  <video controls src={ele.video} className='img'></video>}
   <div className="card-body">
@@ -128,7 +128,7 @@ if(video){
    
    <input onChange={handleInputChange} hidden type="file" id='abc'/>
  {image &&   <img style={{margin:"20px auto"}} width={"150px"} height={"150px"}  src={URL.createObjectURL(image)} alt="" />}
-{!image && !video &&  <img style={{margin:"20px auto"}} width={"200px"} height={"200px"} src="https://w7.pngwing.com/pngs/527/625/png-transparent-scalable-graphics-computer-icons-upload-uploading-cdr-angle-text-thumbnail.png" alt="" />}
+{!image && !video &&  <img style={{margin:"20px auto"}} width={"200px"} height={"200px"} src="https://cdn.dribbble.com/users/4625326/screenshots/19602645/comp_2.gif" className='shadow1'  alt="" />}
 { video  && <video controls style={{margin:"20px auto"}} width={"200px"} height={"200px"} src={URL.createObjectURL(video)}></video>}
  <button onClick={handlePostSubmit} className='button1'>Submit Blog</button>
 </form>

@@ -16,7 +16,7 @@ const YourBlogs = () => {
   let token = ctx.user.token;
 
   async function xyz(){
-    let res = await fetch(`http://localhost:4000/posts/allpost/${id}`,{
+    let res = await fetch(`https://backend-er58.onrender.com/posts/allpost/${id}`,{
       method:"GET",
       headers:{
         'content-type':'application/json',
@@ -35,7 +35,7 @@ const YourBlogs = () => {
 
  async function handleDelete(ans){
     console.log(ans._id)
-    let res = await fetch(`http://localhost:4000/posts/delete/${ans._id}`,{
+    let res = await fetch(`https://backend-er58.onrender.com/posts/delete/${ans._id}`,{
       method:"DELETE"
     })
 
@@ -58,7 +58,7 @@ const YourBlogs = () => {
       reader.readAsDataURL(image);
       reader.onload =async()=>{
         console.log(reader.result)
-        let res = await fetch(`http://localhost:4000/post/update/${postId}`,{
+        let res = await fetch(`https://backend-er58.onrender.com/post/update/${postId}`,{
           method:"PUT",
           headers:{
             'content-type':'application/json'
@@ -76,7 +76,7 @@ const YourBlogs = () => {
     }
     else{
     
-      let res = await fetch(`http://localhost:4000/posts/update/${postId}`,{
+      let res = await fetch(`https://backend-er58.onrender.com/posts/update/${postId}`,{
         method:"PUT",
         headers:{
           'content-type':'application/json'
@@ -119,10 +119,10 @@ const YourBlogs = () => {
         <label htmlFor="">Title</label>
         <input type="text"  ref={titleRef}/>
         <label htmlFor="">Content</label>
-        <textarea ref={contentRef} name="" id=""></textarea>
-        <label className='button1 text-center my-4 pt-1' htmlFor="file">Upload Image</label>
+        <input ref={contentRef} name="" id=""></input>
+        <label className='button1 text-center my-4 pt-1' htmlFor="file">Photo/Video</label>
         <input onChange={handleInputChange} type="file" hidden id='file'/>
-       {!image && <img src="https://static.vecteezy.com/system/resources/previews/000/421/494/original/upload-icon-vector-illustration.jpg" style={{width:"200px" ,height:"200px",margin:"auto"}} alt="" />}
+       {!image && <img src="https://cdn.dribbble.com/users/4625326/screenshots/19602645/comp_2.gif" className='shadow1' style={{width:"200px" ,height:"200px",margin:"auto"}} alt="" />}
        {image && <img src={URL.createObjectURL(image)} style={{width:"200px" ,height:"200px"}} alt="" />}
         <button onClick={handleSubmit} className='button1 my-4'>Submit</button>
       </form>
